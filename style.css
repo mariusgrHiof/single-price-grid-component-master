@@ -1,10 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+:root {
+  /* Primary */
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --color-light-grey: hsl(204, 43%, 93%);
+  --color-grey-blue: hsl(240, 14%, 80%);
+}
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-light-grey);
+}
+
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 637px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.top-info {
+  padding: 2em;
+  font-weight: 700;
+}
+.top-info__title {
+  color: var(--color-cyan);
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.top-info__guarantee {
+  color: var(--color-bright-yellow);
+  margin-bottom: 1em;
+}
+.top-info__description {
+  color: var(--color-grey-blue);
+  line-height: 150%;
+}
+
+.lower-info {
+  display: flex;
+}
+
+.subscription {
+  background: #2bb3b1;
+  color: #fff;
+  width: 50%;
+  padding: 2em;
+}
+.subscription__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.subscription__amount {
+  color: hsl(204, 43%, 83%);
+  margin-bottom: 1em;
+}
+.subscription__amount span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+.subscription__description {
+  color: var(--color-light-grey);
+  margin-bottom: 1em;
+}
+.btn-signup {
+  padding: 1.2em 2em;
+  background: var(--color-bright-yellow);
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.why-us {
+  background: #4abebd;
+  color: #fff;
+  width: 50%;
+  padding: 2em;
+}
+.why-us__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.why-us__description {
+  list-style-type: none;
+}
+
+.why-us__item {
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+  color: hsl(204, 43%, 90%);
+}
+.attribution {
+  margin: 1em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    margin: 4em 1.5em;
+  }
+
+  .lower-info {
+    flex-direction: column;
+  }
+  .subscription {
+    width: 100%;
+  }
+  .why-us {
+    width: 100%;
+  }
 }
